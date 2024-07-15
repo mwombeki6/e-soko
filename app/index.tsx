@@ -1,5 +1,6 @@
 import { Image, View, StyleSheet } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { Link } from "expo-router";
 
 const PlaceholderImage = require('../assets/images/imagess/background-image.png/');
 
@@ -9,6 +10,7 @@ export default function Index() {
       style={styles.container}
     >
       <View style={styles.imageContainer}></View>
+      <Link href={'/profile'} style={{color: 'blue'}}>Go to profile</Link>
       <Image source={PlaceholderImage} style={styles.image} />
       <StatusBar style="auto"/>
     </View>
